@@ -1,12 +1,70 @@
-# React + Vite
+Secure Email System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cryptography-based secure email application that ensures Confidentiality, Integrity, and Authentication (CIA) for email communication using modern encryption techniques. The system supports secure one-to-one and group email communication with encrypted attachments.
 
-Currently, two official plugins are available:
+📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Secure Email System is designed to protect email communication against common security threats such as eavesdropping, message tampering, and impersonation. It integrates RSA, AES, and SHA-512 cryptographic algorithms to provide end-to-end security while maintaining usability.
 
-## Expanding the ESLint configuration
+The project also supports secure group messaging, where a single email can be sent to multiple recipients while preserving individual confidentiality by generating and encrypting unique AES keys for each recipient.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔐 Security Features
+
+Confidentiality
+Email content and attachments encrypted using AES
+AES keys encrypted using recipient-specific RSA public keys
+
+Integrity
+SHA-512 hashing ensures detection of any message tampering
+
+Authentication
+RSA-based digital signatures verify sender authenticity
+
+Secure Group Messaging
+Unique AES key generated per recipient
+Same security guarantees as one-to-one communication
+
+🧠 Cryptographic Algorithms Used
+Algorithm	Purpose
+RSA	Key exchange, digital signatures
+AES	Email and attachment encryption
+SHA-512	Message integrity verification
+
+🚀 Getting Started
+Prerequisites
+Node.js (v16 or above)
+npm or yarn
+
+Installation
+cd client
+npm install
+
+Run the Application
+npm run dev
+
+The application will be available at:
+http://localhost:5173
+
+🧪 Testing & Validation
+Tested for secure email transmission
+Verified integrity checks using SHA-512
+Validated encryption/decryption for both individual and group messaging
+Attachments tested with encrypted storage and retrieval
+
+🧩 Design Principles Followed
+Modular architecture
+Separation of concerns
+Secure-by-design approach
+Scalable cryptographic workflow
+Clean and maintainable codebase
+
+📄 Documentation
+Detailed design explanations, algorithms, and diagrams are available in DOCS folder
+
+🛡️ Security Note
+This project is developed for academic and learning purposes.
+While strong cryptographic standards are used, it should be audited before any production deployment.
+
+👨‍💻 Authors
+Chandu Cherupally (22CSB0C20)
+Manoj Kumar Samudrala (22CSB0C23)
